@@ -12,10 +12,20 @@ Ce module sert à embarquer un Raspberry Pi dans un modèle réduit, et pourvoir
  
 ## Vue d'ensemble
 
+## Scénario d'utilisation
+1. Le module UPS utilise l'alimentation, provenante d'un accumulateur principal bien chargé, pour fournir le Raspberry avec une tension de 5V et un courant de 2A ou moins.
+2. Le module UPS utilise l'alimentation pour charger l'accumulateur secondaire.
+3. Le module UPS cesse de charger l'accumulateur secondaire lorsque celui-ci est suffisamment chargé.
+4. L'alimentation baisse au fur et à mesure que l'accumulateur principal se décharge. Le module UPS fournit le Raspberry avec une tension constante de 5V.
+5. L'alimentation défaille, car l'accumulateur principal est dangeureusement déchargé. Le module UPS sollicite l'accumulateur secondaire pour fournir le Raspberry avec une tension constante de 5V et un courant de 2A ou moins.
+6. Le raspberry, interrogeant régulièrement le module UPS, trouve le moment de s'éteindre.
+7. Le module UPS détecte que le Raspberry s'est éteint, et se désactive lui-même.
+
 # Contraintes fonctionnelles
 Voici la liste des contraintes fonctionnelles répertoriées jusqu'à présent.
 
-## Alimenter le Raspberry 2 model B à partir de l'alimentation principale
+## Alimenter le Raspberry à partir de l'alimentation principale
+C'est la fonctionnalité principale du module.
 
 ## Charger l'accumulateur secondaire à partir de l'alimentation principale.
 Le module UPS surveille les niveaux de tension de sortie de l'accumulateur secondaire, et le met à la charge 
@@ -26,11 +36,17 @@ Le module UPS offre une alimentation inintérrompue; si l'alimentation principal
 ## Détecter que le raspberry s'est éteint
 Le cas échéant, le module UPS peut isoler le Rasperry de l'alimentation principale et de l'accumulateur secondaire.
 
-## Le raspberry peut interroger le module UPS à propos des niveaux de charge
+## Donner au raspberry des informations à propos des niveaux de charge
 Pour que le raspberry ait une chance de s'éteindre proprement avant de manquer de courant, il peut interroger le module UPS pour récupérer:
 
 * Le niveau de l'alimentation principale.
 * Le niveau de l'accumulateur secondaire.
+
+## Faciliter la connexion I2C entre le Raspberry et d'autres modules.
+Puisque le module UPS est branché sur le Raspberry via 
+
+## Indiquer l'état du module par des voyants lumineux.
+Utiliser 3 LED de couleurs pour ceci. Les LED sont facilement visibles.
 
 # Contraintes techniques
 
@@ -55,8 +71,17 @@ Le module UPS protège l'accumulateur contre:
 ## Le Raspberry PI peut se visser sur le module UPS
 Le module UPS offre des fixations pour permettre de visser le Raspberry dessus.
 
+## La seule connexion entre le Raspberry PI et le module UPS est le GPIO.
+Le GPIO contient tous les connecteurs nécessaires. Nous n'en voulons aucun autre.
+
 ## Les différentes prises, voyants et actionneurs sont accessibles
 Le Raspberry se vissant au dessus du module, ceci implique probablement que les différents éléments de connexion se trouvent proches d'un des bords du module.
 
 ## Le Raspberry communique avec le module UPS en I2C
 Parce que Raspberry supporte facilement ce protocole, et parce qu'il est prévu de l'utiliser également pour communiquer avec le module de puissance.
+
+## La construction du module est accessible à des amateurs
+Car les utilisateurs de ce module sont des modélistes, avec une certaine habileté manuelle, mais pas de connaissances précises en électronique.
+
+## La BOM est disponible chez Conrad.ch
+Car ce fournisseur propose également un catalogue de modélisme.
