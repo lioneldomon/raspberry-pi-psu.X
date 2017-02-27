@@ -11,6 +11,13 @@ Ce module sert à embarquer un Raspberry Pi dans un modèle réduit, et pourvoir
   * Connexion I2C.
  
 ## Vue d'ensemble
+L'accumulateur principal est connecté à un module de puissance, qui s'occupe normalement de gérer un moteur, des servos, etc. Le module de puissance offre une prise de courant non régulé, provenant directement de l'accumulateur.  Le module de puissance offre également un accès au bus I2C via un connecteur JST à trois broches. Le module UPS est connecté au GPIO du Raspberry au moyen d'une nape de 40 connecteurs.
+
+![Vue d'ensemble](documentation/raspberry-pi-psu-vue-d-ensemble-1.jpg)
+
+Le module UPS est fixé sous le Raspberry avec 4 visses et entretoises.
+
+![Fixations](documentation/raspberry-pi-psu-vue-d-ensemble-2.jpg)
 
 ## Scénario d'utilisation
 1. Le module UPS utilise l'alimentation, provenante d'un accumulateur principal bien chargé, pour fournir le Raspberry avec une tension de 5V et un courant de 2A ou moins.
@@ -82,7 +89,11 @@ Le Raspberry se vissant au dessus du module, ceci implique probablement que les 
 Parce que Raspberry supporte facilement ce protocole, et parce qu'il est prévu de l'utiliser également pour communiquer avec le module de puissance.
 
 ## T080 - La construction du module est accessible à des amateurs
-Car les utilisateurs de ce module sont des modélistes, avec une certaine habileté manuelle, mais pas de connaissances précises en électronique.
+Car les utilisateurs de ce module sont des modélistes, avec une certaine habileté manuelle, mais pas de connaissances précises en électronique:
+* Le bus I2C et l'accumulateur sont branchés avec des JST de 2.5mm de pas.
+* L'alimentation est branchée sur un connecteur DC coaxial.
+* Il n'y a pas deux prises interchangeables. Il n'est pas possible de se tromper de polarité.
+* Les composants électroniques sont traversants, d'une taille manipulable par des non-professionnels.
 
 ## T090 - La BOM est disponible chez Conrad.ch
 Car ce fournisseur propose également un catalogue de modélisme.
