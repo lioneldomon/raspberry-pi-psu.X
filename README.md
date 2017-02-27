@@ -58,16 +58,19 @@ Utiliser 3 LED de couleurs pour ceci. Les LED sont facilement visibles.
 
 # Contraintes techniques
 
-## T010 - Alimentation principale LiPo 2s
+## T010 - Modèle de Raspberry
+Le module est prévu initialement pour un Raspberry 2 B
+
+## T020 - Alimentation principale LiPo 2s
 L'alimentation principale est fournie par un accumulateur de type LiPo 2S. Le module UPS:
 
 * Supporte le niveau de charge maximum de ce type d'accumulateur.
 * Ne consomme pas d'alimentation si le niveau de charge tombe en dessous du minimum.
 
-## T020 - Pas de transfert entre l'UPS et l'alimentation
+## T030 - Pas de transfert entre l'UPS et l'alimentation
 Le module UPS ne doit jamais transférer du courant vers l'alimentation principale. Celle ci étant fournie par un accumulateur de type LiPo, suivant les conditions elle pourrait réagir de façon catastrophique.
 
-## T030 - Accumulateur secondaire Li-Ion Sony US18650VTC5A
+## T040 - Accumulateur secondaire Li-Ion Sony US18650VTC5A
 Par exemple: http://www.conrad.ch/ce/fr/product/1499575
 Le module UPS protège l'accumulateur contre:
 
@@ -76,24 +79,24 @@ Le module UPS protège l'accumulateur contre:
 * La décharge excessive.
 * Dans la mesure du possible, une surabondance de cycles de charge.
 
-## T040 - Le Raspberry PI peut se visser sur le module UPS
+## T050 - Le Raspberry PI peut se visser sur le module UPS
 Le module UPS offre des fixations pour permettre de visser le Raspberry dessus.
 
-## T050 - La seule connexion entre le Raspberry PI et le module UPS est le GPIO.
+## T060 - La seule connexion entre le Raspberry PI et le module UPS est le GPIO.
 Le GPIO contient tous les connecteurs nécessaires. Nous n'en voulons aucun autre.
 
-## T060 - Les différentes prises, voyants et actionneurs sont accessibles
+## T070 - Les différentes prises, voyants et actionneurs sont accessibles
 Le Raspberry se vissant au dessus du module, ceci implique probablement que les différents éléments de connexion se trouvent proches d'un des bords du module.
 
-## T070 - Le Raspberry communique avec le module UPS en I2C
+## T080 - Le Raspberry communique avec le module UPS en I2C
 Parce que Raspberry supporte facilement ce protocole, et parce qu'il est prévu de l'utiliser également pour communiquer avec le module de puissance.
 
-## T080 - La construction du module est accessible à des amateurs
+## T090 - La construction du module est accessible à des amateurs
 Car les utilisateurs de ce module sont des modélistes, avec une certaine habileté manuelle, mais pas de connaissances précises en électronique:
 * Le bus I2C et l'accumulateur sont branchés avec des JST de 2.5mm de pas.
 * L'alimentation est branchée sur un connecteur DC coaxial.
 * Il n'y a pas deux prises interchangeables. Il n'est pas possible de se tromper de polarité.
 * Les composants électroniques sont traversants, d'une taille manipulable par des non-professionnels.
 
-## T090 - La BOM est disponible chez Conrad.ch
+## T100 - La BOM est disponible chez Conrad.ch
 Car ce fournisseur propose également un catalogue de modélisme.
