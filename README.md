@@ -80,7 +80,7 @@ Le module UPS protège l'accumulateur contre:
 * Dans la mesure du possible, une surabondance de cycles de charge.
 
 ## T050 - Le Raspberry PI peut se visser sur le module UPS
-Le module UPS offre des fixations pour permettre de visser le Raspberry dessus. Le module a une taille maximum de 95mm x 70mm
+Le module UPS offre des fixations pour permettre de visser le Raspberry dessus. Le module a une taille maximum de 95mm x 70mm. La premire version du module peut se visser sur le chassis d'un ECX Torment
 
 ## T060 - La seule connexion entre le Raspberry PI et le module UPS est le GPIO.
 Le GPIO contient tous les connecteurs nécessaires. Nous n'en voulons aucun autre.
