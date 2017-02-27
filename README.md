@@ -1,13 +1,12 @@
 # Objectifs
 Ce module sert à embarquer un Raspberry Pi dans un modèle réduit, et pourvoir à:
 
-1. L'alimenter correctement: 5V, 2A
-2. Prévenir des coupures de courant intempestives. Le module peut utiliser un accumulateur secondaire si jamais le principal se décharge.
-3. Offrir des prises standard pour:
-
-   * Entrée principale de courant.
-   * Connexion d'un accumulateur secondaire.
-   * Connexion I2C.
+* L'alimenter correctement: 5V, 2A
+* Prévenir des coupures de courant intempestives. Le module peut utiliser un accumulateur secondaire si jamais le principal se décharge.
+* Offrir des prises standard pour:
+  * Entrée principale de courant.
+  * Connexion d'un accumulateur secondaire.
+  * Connexion I2C.
  
 # Contraintes fonctionnelles
 
