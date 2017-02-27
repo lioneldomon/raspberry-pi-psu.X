@@ -11,6 +11,14 @@ Ce module sert à embarquer un Raspberry Pi dans un modèle réduit, et pourvoir
   * Connexion I2C.
  
 ## Vue d'ensemble
+L'accumulateur principal est connecté à un module de puissance, qui s'occupe normalement de gérer un moteur, des servos, etc. 
+
+[Vue d'ensemble](/master/documentation/raspberry-pi-psu-vue-d-ensemble-1.jpg)
+
+Le module de puissance offre une prise de courant non régulé, provenant directement de l'accumulateur. Le module de puissance offre également un accès au bus I2C via un connecteur JST à trois broches:
+
+[Fixations](/master/documentation/raspberry-pi-psu-vue-d-ensemble-2.jpg)
+
 
 ## Scénario d'utilisation
 1. Le module UPS utilise l'alimentation, provenante d'un accumulateur principal bien chargé, pour fournir le Raspberry avec une tension de 5V et un courant de 2A ou moins.
