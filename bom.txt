@@ -1,1 +1,14 @@
 BOM du projet
+
+Références Conrad:
+1 pièce (1m):
+Câble en nappe LappKabel (N° Article: 49900051)
+http://www.conrad.ch/ce/fr/product/609908/Cble-en-nappe-LappKabel-49900051-Pas-127-mm-40-x-009-mm-gris-au-mtre?ref=searchDetail
+
+2 pièces:
+Embase femelle ASSMANN (N° Article: AWP 40-7240-T)
+http://www.conrad.ch/ce/fr/product/745430/Embase-femelle-ASSMANN-WSW-AWP-40-7240-T-Pas-254-mm-Nombre-total-de-poles-40-1-pcs/?ref=detview1&rt=detview1&rb=2
+
+1 pièce:
+Embase mâle avec levier d'éjection BKL Electronic (N° Article: 10120594)
+http://www.conrad.ch/ce/fr/product/742119/Embase-mle-avec-levier-djection-courtlong-BKL-Electronic-10120594-Pas-254-mm-Nombre-total-de-ples-40-1-pcs?ref=list
